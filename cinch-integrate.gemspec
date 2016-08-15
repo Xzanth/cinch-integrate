@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
     " other plugins can interface with the integrations in this plugin."
   gem.summary       = "Integrates services into cinch through a new event."
   gem.homepage      = "https://github.com/Xzanth/cinch-integrate"
-  gem.license       = "GPL"
+  gem.license       = "GPL-3.0"
   gem.files         = `git ls-files`.split($INPUT_RECORD_SEPARATOR)
   gem.require_paths = ["lib"]
 
