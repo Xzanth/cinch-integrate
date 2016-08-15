@@ -1,5 +1,5 @@
 # Cinch Integration Plugin
-[![GitHub](https://img.shields.io/badge/github-Xzanth/pugbot-blue.svg)](http://github.com/Xzanth/cinch-integrate)
+[![GitHub](https://img.shields.io/badge/github-Xzanth/cinch-integrate-blue.svg)](http://github.com/Xzanth/cinch-integrate)
 [![License](https://img.shields.io/badge/license-GPLv3-blue.svg)](#license)
 [![Dependency Status](https://img.shields.io/gemnasium/Xzanth/cinch-integrate.svg)](https://gemnasium.com/Xzanth/cinch-integrate)
 [![Gem Version](https://badge.fury.io/rb/cinch-integrate.svg)](https://badge.fury.io/rb/cinch-integrate)  
