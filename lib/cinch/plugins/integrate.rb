@@ -7,24 +7,20 @@ module Cinch
     class Integrate
       include Cinch::Plugin
 
-      listen_to :notify_integrate
-      def listen(_m, message_type, message)
-        config[:integration_hash][message_type].each do |integration|
-          run_integration(integration, message)
-        end
-      end
+      listen_to :connect,   method: :setup
+      listen_to :integrate, method: :run_integration
 
       def setup(*)
-        if config[:integrations].include?("slack")
-          Slack.configure do |config|
-            config.token = config[:slack_key]
-            raise "No slack key supplied" unless config.token
+        if config[:integrations].include?(:slack)
+          Slack.configure do |c|
+            c.token = config[:slack_key]
+            raise "No slack key supplied" unless c.token
           end
           @slack = Slack::Web::Client.new
         end
       end
 
-      def run_integration(integration, message)
+      def run_integration(_m, integration, message)
         unless config[:integrations].include?(integration)
           error "Integration not initialized"
           return
