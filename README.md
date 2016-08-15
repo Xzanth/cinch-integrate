@@ -27,6 +27,11 @@ bot = Cinch::Bot.new do
 end
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+| Option  | Description |
+| ------------- | ------------- |
+| `integrations`  | A list of symbols that correspond to specific integrations, currently the only option is `:slack`|
+| `slack_key` | Slack API token to pass to slack-ruby-client |
+
 You can then have your bot/plugin integrate with slack by sending `:integrate`
 events to the bot like so:
 
